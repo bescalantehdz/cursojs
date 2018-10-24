@@ -5,17 +5,25 @@ var numero;
 var contador;
 var acumulado = 0;
 var resultado;
-
 do{
 
-  numero = parseFloat(prompt('ingresa el numero',''));
-  acumulado = acumulado + numero;
+	numero = parseInt(prompt('ingresa el numero',''));
+
+if(numero >=0){ 
+
+    acumulado = acumulado + numero;
+
+}else if(isNaN(numero)){
+  numero = 0; 
   contador++;
+}
+
+
 
 }while(numero >= 0);
 
+
   
 //muestra la media del acumulado
-resultado = parseFloat(acumulado/contador);
+console.log("la suma es: "+acumulado+" y la media es: "+(numero/resultado));
 
-document.write('el total de la suma es '+acumulado+' la media es: '+resultado);	
